@@ -8,7 +8,8 @@
 </head>
 <body>
     <h1>Create New Post</h1>
-    <form action="">
+    <form action="<?php echo url('post/store'); ?>" method="post">
+    <?php echo csrf_field(); ?>
         <input type="text" name="title" placeholder="Title Here"><br><br>
         <textarea name="details" id="" cols="30" rows="10" placeholder="Details"></textarea><br><br>
         <button>Submit</button>
